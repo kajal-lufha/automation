@@ -21,7 +21,7 @@ resource "azurerm_lb_backend_address_pool" "pool" {
   count               = 2
   name                = "pool-${count.index + 1}"
   loadbalancer_id     = azurerm_lb.lb.id
- # backend_ip_addresses = var.linux_vm_ids
+ 
 }
 
 resource "azurerm_lb_probe" "probe" {
